@@ -1,49 +1,28 @@
-# Personel Hedef Takip PWA
+# Cüzdanım — Gelir Gider Takibi
 
-Bu klasördeki dosyaların tamamını GitHub deponuzun ana dizinine yükleyin.
+Mobil uyumlu, kurulumsuz çalışan gelir–gider takip uygulaması. Veriler kullanıcının tarayıcısında `localStorage` ile saklanır.
 
-Dosyalar:
-- index.html
-- manifest.webmanifest
-- service-worker.js
-- icons/icon-180.png
-- icons/icon-192.png
-- icons/icon-512.png
+## GitHub Pages ile yayınlama
 
-GitHub Pages:
-1. Yeni bir public repository oluşturun.
-2. Bu klasördeki dosyaları yükleyin.
-3. Repository > Settings > Pages bölümüne girin.
-4. Source: Deploy from a branch.
-5. Branch: main, klasör: /(root).
-6. Save düğmesine basın.
+1. GitHub'da yeni ve herkese açık bir depo oluşturun.
+2. Bu klasördeki tüm dosya ve klasörleri deponun ana dizinine yükleyin.
+3. GitHub deposunda **Settings → Pages** bölümünü açın.
+4. **Build and deployment** altında **Deploy from a branch** seçin.
+5. Branch olarak `main`, klasör olarak `/ (root)` seçip kaydedin.
+6. Birkaç dakika sonra Pages adresi aynı ekranda görünür.
 
-## V7 mobil optimizasyon
-- iPhone 13 ve dar ekranlarda yatay taşma kaldırıldı.
-- Kartlar tek sütuna alındı.
-- Hedef seviyeleri tablosu mobil kart görünümüne çevrildi.
+## Mobil uygulama gibi kullanma
 
-## V8 Prim güncellemesi
-- Pozisyon seçimi eklendi.
-- Mağaza %80 prim koşulu eklendi.
-- Aktif çarpan ve tahmini prim hesaplaması eklendi.
-- Hedef seviyelerinde prim karşılıkları gösterildi.
+- iPhone/iPad: Safari → Paylaş → **Ana Ekrana Ekle**
+- Android: Chrome → Menü → **Ana ekrana ekle / Uygulamayı yükle**
 
-## V9 — Tema ve kullanım sayacı
-- Hesapla butonu kaldırıldı; girişler değiştikçe hesaplama otomatik yapılır.
-- Sıfırla butonu korunmuştur.
-- Aydınlık ve karanlık tema arasında geçiş eklenmiştir.
-- Seçilen tema telefonda saklanır.
-- Uygulamanın kaç kez açıldığı ve önceki son açılış zamanı gösterilir.
-- Tema ve sayaç bilgileri Sıfırla işleminden etkilenmez.
+## Dosyalar
 
-## V10 — Karanlık mod prim görünürlüğü
-- Prim kartlarındaki açık renkli yazılar düzeltildi.
-- Sarı, yeşil ve kırmızı prim kutuları için yüksek kontrastlı karanlık tema renkleri eklendi.
-- Tahmini prim, aktif çarpan ve sonraki seviye değerleri karanlık modda net okunur hale getirildi.
+- `index.html`: Uygulamanın tamamı
+- `manifest.webmanifest`: PWA bilgileri
+- `sw.js`: Çevrimdışı kullanım önbelleği
+- `icons/`: Uygulama ikonları
 
-## V11 — Prim kartları karanlık tema düzeltmesi
-- Aktif prim çarpanı, tahmini prim ve sonraki prim seviyesi kartlarının beyaz arka planı kaldırıldı.
-- Kart arka planları karanlık temada koyu lacivert yapıldı.
-- Kart açıklamaları açık gri, sonuç değerleri beyaz yapıldı.
-- CSS seçicileri prim bölümündeki farklı kart sınıflarını da kapsayacak şekilde genişletildi.
+## Önemli
+
+Veriler sunucuya gönderilmez. Tarayıcı verileri silinirse kayıtlar da silinir; bu nedenle uygulama içindeki JSON yedekleme özelliğini düzenli kullanın.
